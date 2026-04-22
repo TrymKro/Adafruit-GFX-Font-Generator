@@ -94,7 +94,7 @@ const GFXfont {font_name} PROGMEM = {{
 }};"""
 
 # Execution
-symbols = " ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅabcdefghijklmnopqrstuvwxyzæøå0123456789:!?°"
+symbols = str(input("The symbols you want in your Adafruit-GFX-font:\n"))
 output_file = "MyFont.h"
 with open(output_file, "w", encoding="utf-8") as f:
     f.write(generate_adafruit_font_file(symbols))
